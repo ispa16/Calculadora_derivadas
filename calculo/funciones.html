@@ -1,78 +1,93 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="shortcut icon" type="image/x-icon" href="imagenes/icon.png">
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#boton").click(function () {
+        var num1 = $("#numero1").val();
+        var num2 = $("#numero2").val();
+        var resultado = parseInt(num1) + parseInt(num2);
+        alert(resultado);
+        $("#resultado").val(resultado);
+
+      });
+    });
+
+  </script>
 
   <title>Calculo</title>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
     <a class="navbar-brand">Proyecto de cálculo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" 
-    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-    aria-expanded="false" 
-    aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span> 
-  </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background:#42484E">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html"><font color="#F0FFFF">INICIO</font> <span 
-          class="sr-only">(current)</span> </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background:#42484E">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <font color="#F0FFFF">INICIO</font> <span class="sr-only">(current)</span>
+          </a>
         </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-          data-toggle="dropdown" aria-haspopup="true" 
-          aria-expanded="false">
-          <font color="#F0FFFF">Calculadoras</font>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="derivadas.html">derivadas</a>
-          <a class="dropdown-item" href="funciones.html">funciones</a>
 
-        </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <font color="#F0FFFF">Calculadoras</font>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="derivadas.html">derivadas</a>
+            <a class="dropdown-item" href="funciones.html">funciones</a>
+
+          </div>
 
       </ul>
-      
+
     </div>
   </nav>
   <div class="row">
-   <div class="col-md-1.5"
-   <ul>
-    <img src="imagenes/fon.jpeg" width="130" height="700">
-   </ul>
- </div>
- <div class="col-md-2" style="background:#ACCDE0">
-  <ul>
-    <br><br><br><br>
-    <h2>TEMAS</h2>
-    <br><br><li><a href="funciones_teoria.html"><h4>Funciones</h3></li></a>
-    <br><li><a href="limites_teoria.html"><h4>Limites</li></a>
-    <br><li><a href="derivadas_teoria.html"><h4>Derivadas</li></a>
+    <div class="col-md-1.5" <ul>
+      <img src="imagenes/fon.jpeg" width="130" height="700">
+      </ul>
+    </div>
+    <div class="col-md-2" style="background:#ACCDE0">
+      <ul>
+        <br><br><br><br>
+        <h2>TEMAS</h2>
+        <br><br>
+        <li><a href="funciones_teoria.html">
+            <h4>Funciones</h3>
+        </li></a>
+        <br>
+        <li><a href="limites_teoria.html">
+            <h4>Limites</li></a>
+        <br>
+        <li><a href="derivadas_teoria.html">
+            <h4>Derivadas</li></a>
 
-  </ul>
-</div>  
+      </ul>
+    </div>
 
 
 <div class="col-md-6" style="background :#F2FFF5">
 <ul>
   <center>
-    <h1>Proyecto de Cálculo</h1>
-  </center>
-  <center>
-    <br><img src="imagenes/Calculo.png" width="500">
-    <br>
+    <h1>Calculadora Funciones</h1>
   </center>
   <center>
         <br>
@@ -84,10 +99,10 @@
         <br>
         Variable Independiente negativa(-x)<input type="text" id= "n3" ><br>
         Variable Independiente negativa(-x)<input type="text" id= "n4"><br>
-        Variable Independiente negativa(-x)<input type="text" id= "n5"><br>
-        <br><br>
+        Variable Independiente negativa(-x)<input type="text" id= "n5"><br><br>
         <input type="button" value="Obtener tabla" onclick="funcion()">
         <script type="text/javascript" src="prueba.js"> </script>
+        
 
 
 
@@ -123,15 +138,10 @@
         </form> 
       </div>
     </center>
-
+  </div>
   </div>
 
   </div>
-  <div class="col-md-0.5"
-   <ul>
-     <img src="imagenes/cal.jpeg" width="125" height="700">
-   </ul>
- </div>
 
   
 
