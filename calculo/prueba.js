@@ -1,4 +1,5 @@
 function funcion() { //inicio del
+    document.write("hola")
     var elementos_x = [];
     var elementos_x = [7]; //arreglo de datos para los elementos en x
     var elementos_y = [];
@@ -30,9 +31,9 @@ function funcion() { //inicio del
     elementos_y[6] = (elementos_x[6] * 1.0) + 5;
     
     //imprimir resultados
-    document.write('     x    ', ' ------------> ', '    f(x)    <br>')
+    document.write('     x    ', ' ------------> ', '    f(x)    <br>');
     for (i = 0; i < elementos_x.length; i++) {
-        document.write(elementos_x[i], ' ------------> ', elementos_y[i], '<br>')
+        document.write(elementos_x[i], ' ------------> ', elementos_y[i], '<br>');
     }
 
 
