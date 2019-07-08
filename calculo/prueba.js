@@ -1,5 +1,4 @@
 function funcion() { //inicio del
-    document.write("hola")
     var elementos_x = [];
     var elementos_x = [7]; //arreglo de datos para los elementos en x
     var elementos_y = [];
