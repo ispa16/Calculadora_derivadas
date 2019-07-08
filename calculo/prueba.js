@@ -5,6 +5,7 @@ function funcion() { //inicio del
     var elementos_y = [7]; //arreglo de datos para los elementos en y
     //var bandera = true; ya no se necesita :v
     var i = 0;
+    var myWindow = window.open("", "MsgWindow", "width=200, height=100"); //variable donde se almacenara lo que se quiere imprimir
     //extraer elementos del html
     //n0
     elementos_x[0] = Number(document.getElementById('n0',i ).value) ;//obtener elementos
@@ -30,12 +31,10 @@ function funcion() { //inicio del
     elementos_y[6] = (elementos_x[6] * 1.0) + 5;
     
     //imprimir resultados
-    document.write('     x    ', ' ------------> ', '    f(x)    <br>');
+    myWindow.document.write('     x    ', ' ------------> ', '    f(x)    <br>');
     for (i = 0; i < elementos_x.length; i++) {
-        document.write(elementos_x[i], ' ------------> ', elementos_y[i], '<br>');
+        myWindow.document.write(elementos_x[i], ' ------------> ', elementos_y[i], '<br>');
     }
-
-
 
 
 
