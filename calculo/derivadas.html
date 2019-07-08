@@ -1,28 +1,184 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-  <title>Calcular derivadas</title>  
-  <meta charset="UTF-8">
-  <link rel="StyleSheet" type="text/css" href="diseño.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="shortcut icon" type="image/x-icon" href="imagenes/icon.png">
-   
-</head>
-<body style="background:#D9F3D0">
-<h1>
-    Calculadora de derivadas
-  
-</h1>
-<!--<h4>
-    Funcion normal
-    <script
-    
-    src = "funcion.js">
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#boton").click(function () {
+        var num1 = $("#numero1").val();
+        var num2 = $("#numero2").val();
+        var resultado = parseInt(num1) + parseInt(num2);
+        alert(resultado);
+        $("#resultado").val(resultado);
 
-    </script>
-</h4> -->
-<h2>
-    <a href="index.html">Atras</a>
-</h2>    
+      });
+    });
+
+  </script>
+
+  <title>Calculo</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand">Proyecto de cálculo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background:#42484E">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <font color="#F0FFFF">INICIO</font> <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <font color="#F0FFFF">Calculadoras</font>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="derivadas.html">derivadas</a>
+            <a class="dropdown-item" href="funciones.html">funciones</a>
+
+          </div>
+
+      </ul>
+
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col-md-1.5" <ul>
+      <img src="imagenes/fon.jpeg" width="130" height="700">
+      </ul>
+    </div>
+    <div class="col-md-2" style="background:#ACCDE0">
+      <ul>
+        <br><br><br><br>
+        <h2>TEMAS</h2>
+        <br><br>
+        <li><a href="funciones_teoria.html">
+            <h4>Funciones</h3>
+        </li></a>
+        <br>
+        <li><a href="limites_teoria.html">
+            <h4>Limites</li></a>
+        <br>
+        <li><a href="derivadas_teoria.html">
+            <h4>Derivadas</li></a>
+
+      </ul>
+    </div>
+
+
+<div class="col-md-6" style="background :#F2FFF5">
+<script> 
+  function derivada(){
+    var myWindow = window.open("", "MsgWindow", "width=200, height=100");
+    var var_a = Number(document.getElementById('n0').value);
+    var a =parseInt(var_a);
+    var var_b = Number(document.getElementById('n1').value) ;
+    var b =parseInt(var_b);
+    var var_c = Number(document.getElementById('n2').value) ;
+    var c =parseInt(var_c);
+    var a_a = a * b;
+    var b_b = b-1;
+    myWindow.document.writeln("La funcion es: <br>")
+    myWindow.document.writeln("f(x) = ",var_a,"* x ^",var_b," + ",var_c)
+    myWindow.document.writeln("y su derivada es")
+    myWindow.document.writeln("f(x) = ",a_a,"* x ^",b_b);
+    }
+</script>
+
+<ul>
+  <center>
+    <h1>Calculadora Derivadas</h1>
+  </center>
+  
+  <center>
+        <br>
+        <b>Derivadas de funciones de la forma a* x ^ b + c</b>
+        <br><br>
+        <!--<script src="derivada.js"></script>-->
+        Variable a <input type="text" id="n0"><br>
+        Variable b <input type="text" id="n1"><br>
+        Variable c <input type="text" id="n2"><br><br>
+        <input type="button" value="Obtener Derivada" onclick="derivada()">
+  </center>
+</ul>
+</div>
+<div class="col-md-2" style="background:#ACCDE0">
+      <ul>
+        </ul>
+      </div>
+<div class="col-md-0.5" <ul>
+      <img src="imagenes/fon.jpeg" width="120" height="700">
+      </ul>
+    </div>
+
+<!--<div class="col-md-2" style="background:#ACCDE0">
+  <br>
+  <ul><font size=4><b>Calculador de sumas</b></font></ul>
+
+
+  <div class="row">
+    <center>
+      <div class="col-md-8" style="background:#efefef;color: black;padding: 3em;">
+
+        <form>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Número 1</label>
+            <input type="number" class="form-control" id="numero1" 
+            placeholder="Ingrese el numero 1">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Número 2</label>
+            <input type="number" class="form-control" id="numero2" 
+            placeholder="Ingrese el numero 1">
+          </div>
+            
+          <a id="boton" href="#" >Calcular</a>
+
+        </form> 
+      </div>
+    </center>
+  </div>
+  </div>
+
+  </div>
+
+-->  
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
+
