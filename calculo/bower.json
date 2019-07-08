@@ -1,0 +1,21 @@
+{
+  "name": "redesign-bootstrap",
+  "description": "redesign bootstrap",
+  "main": "",
+  "authors": [
+    "Keven Jesus"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "animate.css": "^3.5.2"
+  }
+}

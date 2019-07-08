@@ -1,0 +1,161 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chamando de bootman</title>
+    <meta name="description" content="calculando derivadas com o batman">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <style type="text/css">
+        body {
+          padding: 20px;
+          text-align: center;
+          height: 1vh;
+        }
+
+        .vazio{
+            display: none;
+        }
+
+        /**/
+        .ani{
+            display: block;
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            width: 10%;
+            z-index: 10;
+            animation: aprox 5s ease-in 1;
+        }/**/
+
+        .parent {
+            position: relative;
+            width: 100%;
+            margin: 0 auto 0 auto; /* positioning tweak */
+        }
+
+        .parent:before {
+            content: "";
+            display: block;
+            padding-top: 61.37%; 
+        }
+
+        .bat {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            background:  url('_img/batsprite2.png') no-repeat 0 0%;
+            background-size: 100%;
+            animation: movement .6s steps(8) infinite;
+        }
+
+        @keyframes movement {
+          0% { background-position: 0 0%; }
+          100% { background-position: 0 100%; }
+        }
+
+        @keyframes aprox {
+            0% {  width: 10%;
+                right: 5%;
+                top: 5%;
+            }
+            100% {  width: 200%;
+                right: -50%;
+                top: -50%;
+            }
+        }
+
+        h1 {
+          font-size: 1.2em;
+        }
+
+        .p {
+          margin-top: 120px;
+          font-size: 14px;
+        }
+    </style>
+
+</head>
+<body>
+    <br>
+    <br>
+    <div class="col-lg-4 col-lg-offset-4">
+        <button type="button" class="btn btn-lg btn-block btn-primary" data-target="#myModal" data-toggle="modal">Calcular</button>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="myModalLabel">Calculando...</h2>
+                </div>
+                <div class="modal-body">
+                    <img src="_img/calculando.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="myModalLabel">Muito difícil. Vamos chamar o Batman!</h2>
+                </div>
+                <div class="modal-body">
+                    <img src="_img/batsignal.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ani" class="vazio">
+        <div class="parent">
+            <div class="bat"></div>
+        </div>
+    </div>
+
+    <script>
+        $('.modal').modal({backdrop:'static',keyboard:false});
+
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#ani').removeClass('ani');
+            $('#ani').addClass('vazio');
+            setTimeout(function () {
+                $('#myModal').modal('hide');
+            }, 4000);
+        });
+
+        $('#myModal').on('hidden.bs.modal', function (){
+            $('#myModal2').modal('show');
+        });
+
+        $('#myModal2').on('shown.bs.modal', function () {
+            setTimeout(function () {
+                $('#myModal2').modal('hide');
+                $('#ani').removeClass('vazio');
+                $('#ani').addClass('ani');
+            }, 3000);
+        });
+
+
+        $('#myModal').modal('hide');
+        $('#myModal2').modal('hide');
+
+    </script>
+</body>
+</html>
